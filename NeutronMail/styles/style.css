@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #70497c;
+  --text-color: #535353;
+  --social-bg: #62625f;
+  --button-donate: #518fe7;
+}
+
+* {
+  box-sizing: border-box;
+}

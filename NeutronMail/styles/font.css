@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "TitilliumWebReg";
+  src: url(../font/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+  font-family: "TitilliumWebBold";
+  src: url(../font/TitilliumWeb-Bold.ttf);
+}
+@font-face {
+  font-family: "Malaga";
+  src: url(../font/MalagaNarrowItalic.otf);
+}
