@@ -23,7 +23,7 @@
 
 .container {
     width: 1250px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     font-family: "TitilliumWebReg", serif;
     color: var(--text-color);
@@ -141,4 +141,115 @@
   border-radius: 50%;
   margin-left: 22px;
   transition: all 0.3s linear;
+}
+
+.user-option__store:hover,
+.user-option__create:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0px 2px #ffffff80;
+  transition: all 0.3s linear;
+}
+
+.svg-option {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+  position: relative;
+  top: 10px;
+}
+
+.appstore {
+  left: 10px;
+}
+
+.gplay {
+  left: 12px;
+}
+
+.social-box-list {
+  position: fixed;
+  right: 20px;
+  top: 165px;
+}
+
+.social-box__item {
+  width: 20px;
+  height: 20px;
+  background-color: var(--social-bg);
+  margin-bottom: 20px;
+  border-radius: 3px;
+  transition: all 0.2s linear;
+}
+
+.svg-social {
+  width: 12px;
+  height: 12px;
+  fill: #fff;
+  position: relative;
+  left: 4px;
+}
+
+.social-box__item:hover {
+  transform: translateX(-5px) scale(1.2);
+  box-shadow: 5px 5px 3px #8a8a8a;
+  transition: all 0.2s linear;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-list__item {
+  flex-basis: 370px;
+}
+
+.features-list-wrap {
+  padding: 5px 0 5px 65px;
+}
+
+.features-list__item:first-child .features-list-wrap {
+  background: url(./assets/img/shield.png) no-repeat left 50%;
+}
+
+.features-list__item:nth-child(2) .features-list-wrap {
+  background: url(./assets/img/lock.png) no-repeat left 50%;
+}
+
+.features-list__item:last-child .features-list-wrap {
+  background: url(./assets/img/key.png) no-repeat left 0;
+}
+
+.feautres-list__title {
+  margin: 0;
+}
+
+.features-list__desc {
+  margin: 0 0 15px 0;
+}
+
+.features-list__text {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.features-list__item:nth-child(2) {
+  position: relative;
+}
+
+.features-list__item:nth-child(2)::before,
+.slogan-button::before,
+.slogan-button::after,
+.who-help::before,
+.who-help::after {
+  position: absolute;
+  content: "";
+  background-color: #b9b9b9;
+}
+
+.features-list__item:nth-child(2)::before {
+  top: -130px;
+  left: -30px;
+  height: 215px;
+  width: 2px;
 }
