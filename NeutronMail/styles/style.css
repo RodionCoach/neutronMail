@@ -20,7 +20,6 @@
 
   background-size: contain;
   position: relative;
-  z-index: 0;
 }
 
 .container {
@@ -99,6 +98,34 @@
   left: -5px;
 }
 
+.header-language__link {
+  color: #0b0b0bcc;
+  margin-right: 0 auto;
+  position: relative;
+  line-height: 1;
+  display: inline-block;
+  text-decoration:none;
+  cursor: pointer;
+}
+
+.header-language__link::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--social-bg);
+  transition: width .3s ease-in-out;
+}
+
+.header-language__link:hover::after {
+  width: 100%;
+}
+
+.header-language__link:hover {
+  text-shadow: 0 0 5px #fff;
+  color: var(--primary-color);
+}
+
 .user-login:hover {
   color: var(--primary-color);
 }
@@ -139,7 +166,7 @@
   box-sizing: border-box;
 }
 
-.user-option__create::before, .user-option__store::before{
+.user-option::before{
   content: "";
   margin-left: -150px;
   position: absolute;
@@ -149,11 +176,11 @@
   right: 0;
   bottom: 0;
   border-radius: 0 0 100px 100px;
-  z-index: -1;
   background: radial-gradient(ellipse at top,rgba(94, 123, 234,.6) 0%,rgba(94, 123, 234,.6) 10%,rgba(255,0,0,0) 60% ,rgba(255,0,0,0) 100%);
 }
 
 .user-option__create {
+  z-index: 1;
   padding: 15px 65px;
   border-radius: 50px;
   font-size: 18px;
@@ -161,6 +188,7 @@
 }
 
 .user-option__store {
+  z-index: 1;
   width: 45px;
   height: 45px;
   background-color: var(--primary-color);
@@ -260,11 +288,13 @@
   line-height: 22px;
 }
 
-.features-list__item:nth-child(2) {
+.features-list__item:nth-child(2),
+.features-list__item:nth-child(3) {
   position: relative;
 }
 
 .features-list__item:nth-child(2)::before,
+.features-list__item:nth-child(3)::before,
 .slogan-button::before,
 .slogan-button::after,
 .who-help::before,
@@ -278,7 +308,13 @@
   top: -130px;
   left: -30px;
   height: 215px;
-  width: 2px;
+  width: 1px;
+}
+
+.features-list__item:nth-child(3)::before {
+  right: -50%;
+  height: 1px;
+  width: 269px;
 }
 
 .section-slogan {
@@ -308,14 +344,14 @@
   top: 49%;
   left: -1500px;
   width: 1500px;
-  height: 2px;
+  height: 1px;
 }
 
 .slogan-button::after {
   left: 50%;
   top: -450px;
   height: 450px;
-  width: 2px;
+  width: 1px;
 }
 
 .slogan-button:hover {
@@ -489,13 +525,13 @@
   top: 0;
   right: 0;
   width: 1500px;
-  height: 2px;
+  height: 1px;
 }
 
 .who-help::after {
   top: 0;
   right: 0;
-  width: 2px;
+  width: 1px;
   height: 440px;
 }
 
@@ -574,15 +610,17 @@
   position: relative;
 }
 
-.footer-social__link::after {
+.footer-social__link:not(:nth-last-child(2))::after {
   content: "\002F";
   position: absolute;
   right: -15px;
   top: 4px;
 }
-
+s
 .footer-list__link:hover,
 .footer-social__link:hover,
 .footer-contact__link:hover {
   text-shadow: 0 0 5px #fff;
+  color: var(--primary-color);
+  text-decoration: underline;
 }
