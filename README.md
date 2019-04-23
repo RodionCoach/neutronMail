@@ -14,4 +14,4 @@
  «+»Email addresses must be clickable as 'mailto'.
  «-»Care about breadcrumbs (slashes between social links). They should not be selected as other text does.
 
- ![MarkUp_screen](https://github.com/RodionCoach/neutronMail/assets/img/screen.png)
+ ![MarkUp_screen](https://github.com/RodionCoach/neutronMail/blob/NeutronMail/assets/img/screen.png)
